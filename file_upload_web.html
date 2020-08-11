@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet'></link>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>File Upload</title>
+</head>
+<body>
+<div class="container">
+  <div class="col-lg-auto offset-lg-4">
+    <div class="h5"><br>FILE UPLOAD</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+	<div class="col-lg-auto offset-lg-4">
+      <br><img src="http://localhost/web_hw/photo_uploaded/icon/name2.png" class="img-fluid" alt="Responsive image">
+	</div>
+	<div class="col-lg-auto">
+      <br><p class="font-weight-normal" id="name" name="name"></p>
+	</div>
+  </div>
+  <div class="row">
+	<div class="col-lg-auto offset-lg-4">
+      <img src="http://localhost/web_hw/photo_uploaded/icon/file.png" class="img-fluid" alt="Responsive image" style="display:none" id="img1">
+	</div>
+	<div class="col-lg-auto">
+	  <a href="#" onclick="downloadFile()">
+        <p class="font-weight-normal" id="file_name" name="file_name" style="display:none" ></p>
+	  </a>
+	</div>
+  </div>
+  <div class="row">
+	<div class="col-lg-auto offset-lg-4">
+      <img src="http://localhost/web_hw/photo_uploaded/icon/memory.png" class="img-fluid" alt="Responsive image" style="display:none" id="img2">
+	</div>
+	<div class="col-lg-auto">
+      <p class="font-weight-normal" id="file_size" name="file_size" style="display:none"></p>
+	</div>
+  </div>
+  <div class="row">
+	<div class="col-lg-auto offset-lg-4">
+      <img src="http://localhost/web_hw/photo_uploaded/icon/write.png" class="img-fluid" alt="Responsive image" style="display:none" id="img3">
+	</div>
+	<div class="col-lg-auto">
+      <p class="font-weight-normal" id="file_type" name="file_type" style="display:none"></p>
+	</div>
+  </div>
+  <div class="row">
+	<div class="col-lg-auto offset-lg-4">
+      <img src="http://localhost/web_hw/photo_uploaded/icon/clock2.png" class="img-fluid" alt="Responsive image" style="display:none" id="img4">
+	</div>
+	<div class="col-lg-auto">
+      <p class="font-weight-normal" id="file_upload_time" name="file_upload_time" style="display:none"></p>
+	</div>
+  </div>
+  <div class="col-lg-auto offset-lg-4"><br><br>
+  <form id="uploadForm" action = "file_upload.php" method = "post" enctype = "multipart/form-data">			
+	<label class="btn btn-info">
+	  <input type = "file" name = "myFile" id = "myFile" style="display:none" onchange="show_file_name()"/>
+	  <i class="fa fa-folder-open"></i> Choose File
+	</label>
+	<font class="font-weight-normal" id="file_selected" name="file_selected">no file selected </font>
+	<br>
+	<label class="btn btn-light">
+	  <input type="submit" id="file_upload" name="file_upload" style="display:none"/>
+	  <i class="fa fa-chevron-right"></i> Upload(Up to 4MB)
+	</label>
+	<input type = "text" id="user_id" name="user_id" value = "" style="display:none"/>		
+  </form>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+	<div class="w-100"><br><br><br></div>
+  </div>
+  <div class="btn-group d-flex" role="group">
+    <button type="button" class="btn btn-light w-100" onclick="location.href='http://localhost/web_hw/personal_page_web.html'">Personal Page</button>
+    <button type="button" class="btn-dark w-100" onclick="location.href='http://localhost/web_hw/login_web.html'">LOG OUT</button>
+  </div>
+</div>
+
+<script src="file_upload_control.js"></script>
+</body>
+</html>

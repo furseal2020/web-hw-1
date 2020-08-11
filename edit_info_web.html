@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Edit Page</title>
+</head>
+<body>
+<div class="container">
+  <div class="col-lg-auto offset-lg-4">
+    <div class="h5"><br>EDIT PERSONAL INFO</div>
+  </div>
+</div>
+<div class="container">
+<form id="myForm" Action="personal_page_web.html" Method="POST" Enctype="application/x-www-form-urlencoded">
+  <div class="form-group row">
+    <div class="col-lg-4 offset-lg-4">
+	  <br><p class="font-weight-normal" id="name" name="name"></p>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-lg-4 offset-lg-4">
+      <input type="email" class="form-control" id="emailAddress1" name="email">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-lg-4 offset-lg-4">
+      <input type="text" class="form-control" id="password1" name="pw">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="color" class="col-lg-2 offset-lg-4 col-form-label">Favorite Color :</label>
+    <div class="col-lg-2">
+      <input type="color" class="form-control" id="color1" name="color" value="#ff0000">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+  <label class="col-lg-1 offset-lg-4 col-form-label">Sex :</label>
+  <div class="w-100"></div>
+  <div class="col offset-lg-4"> 
+  <div class="form-check-inline">
+    <label class="form-check-label">
+      <input type="radio" class="form-check-input" name="sex" id="sex_male" value="male">Male
+    </label>
+  </div>
+  <div class="form-check-inline">
+    <label class="form-check-label">
+      <input type="radio" class="form-check-input" name="sex" id="sex_female" value="female">Female
+    </label>
+  </div>
+  </div>
+  </div>
+ 
+  <div class="form-group row">
+    <div class="col-lg-4 offset-lg-4">
+      <label><input type="checkbox" class="checkbox" id="LGBT" name="LGBT" value=TRUE> I am LGBT.</label>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <div class="col-lg-12 text-center">
+	  <br><button class="btn btn-light" type="submit" name="modify"  onclick="return myClick()">MODIFY</button>
+    </div>
+  </div>
+</form>
+</div>
+<div class="container">
+  <div class="row">
+	<div class="w-100"><br><br><br></div>
+  </div>
+  <div class="btn-group d-flex" role="group">
+    <button type="button" class="btn btn-light w-100" onclick="location.href='http://localhost/web_hw/personal_page_web.html'">Personal Page</button>
+    <button type="button" class="btn-dark w-100" onclick="location.href='http://localhost/web_hw/login_web.html'">LOG OUT</button>
+  </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="edit_info_control.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet'></link>
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css">
+  <title>Personal Page</title>
+</head>
+<body>
+<div class="container">
+  <div class="col-lg-auto">
+    <div class="h5"><br>MEMBER INFO</div>
+  </div>
+</div>
+
+<div class="container">  
+  <div class="row">
+    <div class="col-lg-6">
+	  <div class="row">
+	    <div class="col-lg-2">
+		  <br><img src="http://localhost/web_hw/photo_uploaded/icon/name.png" class="img-fluid" alt="Responsive image">
+		</div>
+		<div class="col-lg-10">
+		  <br><p class="font-weight-normal" id="name" name="name"></p>
+		</div>
+		<div class="col-lg-2">
+		  <img src="http://localhost/web_hw/photo_uploaded/icon/email.png" class="img-fluid" alt="Responsive image">
+		</div>
+		<div class="col-lg-10">
+		  <p class="font-weight-normal" id="email" name="email"></p>
+		</div>
+		<div class="col-lg-2">
+		  <img src="http://localhost/web_hw/photo_uploaded/icon/paint.png" class="img-fluid" alt="Responsive image">
+		</div>
+		<div class="col-lg-10">
+		  <p class="font-weight-normal" id="color" name="color"></p>
+		</div>
+		<div class="col-lg-2">
+		  <img src="http://localhost/web_hw/photo_uploaded/icon/gender.png" class="img-fluid" alt="Responsive image">
+		</div>
+		<div class="col-lg-10">
+		  <p class="font-weight-normal" id="sex" name="sex"></p>
+		</div>
+		<div class="col-lg-2">
+		  <img src="http://localhost/web_hw/photo_uploaded/icon/clock1.png" class="img-fluid" alt="Responsive image">
+		</div>
+		<div class="col-lg-10">
+		  <p class="font-weight-normal" id="time" name="time"></p>
+		</div>
+	  </div>	  
+	</div>
+	<div class="col-lg-6">
+	   <div class="col-lg-12 text-center">
+		 <img class="img-responsive" src="" style="width:30%" id="img">
+	   </div>	   
+	   
+	   <div class="col-lg-12 text-center">		 		 	 
+	     <form id="uploadForm" action = "avatar_upload.php" method = "post" enctype = "multipart/form-data">			
+			<br><input type = "file" name = "myAvatar" id = "myAvatar" accept="image/*" onchange="loadFile(event)"/><br/>
+			<br><input type="submit" name="avatar_upload" value="New Avatar"/>
+			<input type = "text" id="user_id" name="user_id" value = "" style="display:none"/>			
+		 </form>
+	   </div>
+    </div>
+  </div>
+  <br><br>
+</div>
+
+<div class="container">
+	<div id="file_table">
+	    <bootstrap-table :columns="columns" :data="data" ></bootstrap-table>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="w-100"><br><br></div>
+    </div>
+	<div class="btn-group d-flex" role="group">
+	  <button type="button" class="btn-dark w-100" onclick="location.href='http://localhost/web_hw/edit_info_web.html'">EDIT PERSONAL INFO</button>
+      <button type="button" class="btn btn-light w-100" onclick="location.href='http://localhost/web_hw/file_upload_web.html'">FILE UPLOAD</button>
+      <button type="button" class="btn-dark w-100" onclick="location.href='http://localhost/web_hw/member_list_web.html'">FULL MEMBER LIST</button>
+    </div>
+	<div class="row">
+		<div class="w-100"><br></div>
+    </div>
+	<button type="button" class="btn btn-secondary w-100" onclick="location.href='http://localhost/web_hw/login_web.html'">LOG OUT</button>
+	<div class="row">
+		<div class="w-100"><br><br></div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdn.bootcss.com/bootstrap-table/1.17.1/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table-vue.min.js"></script>
+<script src="personal_page_control.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">  
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Member List Page</title>
+</head>
+<body>
+<div class="container">
+  <div class="col-lg-auto">
+    <div class="h5"><br>MEMBER LIST</div>
+  </div>
+</div>
+<div class="container">
+  <div class="table-responsive">
+    <table id="member_table"> 
+	  <tr>
+	    <th data-field="id"></th>
+        <th data-field="name"></th>
+        <th data-field="sex"></th>
+		<th data-field="color"></th>
+		<th data-field="email"></th>
+	  </tr>
+	</table>
+  </div>
+</div>
+<div class="container">
+<div class="row">
+	<div class="w-100"><br><br><br></div>
+  </div>
+  <div class="btn-group d-flex" role="group">
+    <button type="button" class="btn btn-light w-100" onclick="location.href='http://localhost/web_hw/personal_page_web.html'">Personal Page</button>
+    <button type="button" class="btn-dark w-100" onclick="location.href='http://localhost/web_hw/login_web.html'">LOG OUT</button>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
+<script src="member_list_control.js"></script>
+</body>
+</html>
